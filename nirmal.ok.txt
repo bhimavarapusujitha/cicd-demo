@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f3f4;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 500px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #202124;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      background: #1a73e8;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1558b0;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Feedback Form</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course" required>
+        <option value="">--Choose--</option>
+        <option value="cse">Computer Science</option>
+        <option value="ece">Electronics</option>
+        <option value="eee">Electrical</option>
+        <option value="mech">Mechanical</option>
+      </select>
+
+      <label>Rate the Teaching Quality</label>
+      <input type="radio" name="rating" value="Excellent" required> Excellent <br>
+      <input type="radio" name="rating" value="Good"> Good <br>
+      <input type="radio" name="rating" value="Average"> Average <br>
+      <input type="radio" name="rating" value="Poor"> Poor <br>
+
+      <label for="feedback">Additional Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your comments here..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
